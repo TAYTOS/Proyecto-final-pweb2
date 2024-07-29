@@ -179,7 +179,12 @@
 
 
 ##  Diagrama Entidad-Relación
-    A continuación se muestra el link del Diagrama Entidad-Relación [Link](https://lucid.app/lucidchart/3526162e-ef47-4f6c-a6e2-4a1ea9dfbaab/edit?invitationId=inv_78891cc9-36db-4b42-9627-b9843970e02b&page=0_0#/ "Diagrama Entidad-Relación").
+
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Diagrama-Entidad-Relacion-1.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
+
+
+## Diagra de procesos
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Diagrama-Entidad-Relacion-2.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
 ##  Administración con Django
     A continuación se muestra un link que muestra el desarrollo back end [Link](https://lucid.app/lucidspark/2169bab1-ffaf-4f27-8aa1-e185e98646f1/edit?invitationId=inv_b7404b2e-e518-4dc9-a9ba-1e5fefdea924&page=0_0#/ "Desarrollo back end").
@@ -205,32 +210,45 @@
     2. POST : Con este método se enviara el código del alumno y se devolvera sus inscripciones. En formato JSON.
 ## Funciones
     Página de login en la cual internamente se identifica si el usuario es alumno o docente
-    
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20001610.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Inicio como administrador posibilidad de agregar docente y grupos de laboratorio
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/panelinicio.PNG?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Vista de Profesores
     Capacidad de agregar profesores a su vez de editar 
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20001728.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20001843.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Capacidad de agregar laboratorios y ver laboratorios
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20001903.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20001946.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
+
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20001959.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
 
 
     Acciones como alumno
     Vista al ingresar como alumno
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002034.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Acciones de matricularme a un laboratorio y ver mis laboratorios
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002058.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     capacidad de anular mi matricula a grupo de laboratorio
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002129.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Mandar solicitudes de cambio de laboratorios
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002204.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Lista de solicitudes de laboratorios
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002325.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
     Lista de respuestas para aceptar solicitudes
 
+<td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002432.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
 
 
@@ -238,7 +256,6 @@
 
 Github del proyecto: https://github.com/TAYTOS/proyecto_final-pweb.git
 
-URL en Heroku:
 
 Arquitectura desarrollo back-end:https://lucid.app/lucidspark/2169bab1-ffaf-4f27-8aa1-e185e98646f1/edit?invitationId=inv_b7404b2e-e518-4dc9-a9ba-1e5fefdea924&page=0_0#
 
