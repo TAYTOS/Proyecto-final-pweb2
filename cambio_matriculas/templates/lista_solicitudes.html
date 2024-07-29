@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LISTA DE SOLICITUDES</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Alumno</th>
+			<th>Curso</th>
+			<th>Ofrezco grupo</th>
+			<th>Busco grupo</th>
+		</tr>
+		{% for sol in solicitudes %}
+		<tr>
+			<td>{{ sol.cui_solicitante }}</td>
+			<td>{{ sol.curso_solicitante.cod_asignatura }}</td>
+			<td>{{ sol.curso_solicitante.grupo }}</td>
+			<td>{{ sol.curso_donante.grupo }}</td>
+			<td><form action="{% url 'respuesta' sol.id %}" method="POST">{% csrf_token %}
+				<input type="submit" value="Interesado">
+			</form></td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
+{% endblock %}

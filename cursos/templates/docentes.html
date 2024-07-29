@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOCENTES</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+
+
+<body>
+	<h1> Docentes </h1>
+	<table>
+		<tr>
+			<th>Código docente</th>
+			<th>Nombre</th>
+			<th>Apellido paterno</th>
+			<th>Apellido materno</th>
+			<th>Estado</th>
+			<th>Editar</th>
+		</tr>
+		{% for docente in docentes %}
+		<tr>
+			<td>{{ docente.cod_docente }}</td>
+			<td>{{ docente.nombre }}</td>
+			<td>{{ docente.apellido_paterno }}</td>
+			<td>{{ docente.apellido_materno }}</td>
+			<td>{{ docente.status }}</td>
+			<td><a href="{% url 'editar_Docentes' docente.cod_docente %}">Editar</td>
+		</tr>
+		{% endfor %}
+		<a href="/agregar-docentes">Agregar</a>
+	</table>
+</body>
+</html>
+{% endblock %}

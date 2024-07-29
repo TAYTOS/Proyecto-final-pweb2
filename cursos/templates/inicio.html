@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor-login">
+<form class="login" method='POST'> {% csrf_token %}
+    <legend>Login</legend>
+    {{ form.as_p }}
+    <input type='submit' value='Enviar'>
+</form>
+</div>
+{% endblock  %}

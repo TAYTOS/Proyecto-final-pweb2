@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="contenedor-login" style="height: 300px" >
+<form method='POST'> {% csrf_token %}
+    <legend>Registrar docentes</legend>
+    {{ form.as_p }}
+    <input type='submit' value='Enviar'>
+</form>
+</div>
+{% endblock %}

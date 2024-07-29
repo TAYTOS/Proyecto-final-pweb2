@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Plantilla base</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<header class='cabecera'>
+		<nav class='nav-header'>
+			<h1 class='h1-header'>Inicio</h1>
+			<ul>
+				<li><a class='a-header' href="/login">Login</a></li>
+				<li><a class='a-header' href="/logout">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+		{% block content %}
+		{% endblock %}	
+</body>
+</html>

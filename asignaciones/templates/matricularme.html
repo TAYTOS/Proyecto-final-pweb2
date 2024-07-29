@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MATRICULARME</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Codigo de Asignatura</th>
+			<th>Grupo</th>
+			<th>Matricularme</th>
+			<th>Estado</th>
+		</tr>
+		{% for lab in laboratorios %}
+		<tr>
+			<td>{{ lab.cod_asignatura }}</td>
+			<td>{{ lab.cod_curso }}</td>
+			<td>{{ lab.grupo }}</td>
+			<td><form action="{% url 'validarMatricula' lab.cod_curso %}" method="POST">{% csrf_token %}
+				<input type="submit" value="Matricularme">
+			</form></td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+	<p></p>
+	<a href="/mislaboratorios">Mis laboratorios</a>
+</body>
+</html>
+{% endblock %}

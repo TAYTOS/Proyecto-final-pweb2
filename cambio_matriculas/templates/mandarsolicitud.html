@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MANDAR SOLICITUD</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<h1> MIS LABORATORIOS </h1>
+	<table>
+		<tr>
+			<th>Mis laboratorios</th>
+			<th>Grupo</th>
+			<th>Solicito grupo</th>
+		</tr>
+		{% for lab in mislabs %}
+		<tr>
+			<td>{{ lab.cod_curso.cod_asignatura }}</td>
+			<td>{{ lab.cod_curso.grupo }}</td>
+			<td>
+				<form  method="POST">
+					{% csrf_token %}
+					<select id="val" name="retorno">
+						<option >Seleccione un grupo</option>
+						{% for grupo in grupos %}
+							{% if grupo.cod_asignatura == lab.cod_curso.cod_asignatura and grupo.grupo != lab.cod_curso.grupo %}
+								<option value="{{ grupo }}">{{ grupo.grupo }}</option>
+							{% endif %}
+						{% endfor %}    
+					</select>
+					<script> function ret(identificador){
+						const obj = document.getElementById(identificador)
+						if(obj.value != null){
+							const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+							//window.location = "solicitud_cambio_matricula/"+ obj.value
+
+							redirect(obj,csrftoken)
+						}
+					}
+					function redirect(obj,csrftoken){
+						data = {
+							"cod_grupo_donante": obj.value,
+							"cod_grupo_solicitante": "{{ lab.cod_curso }}",
+						}
+						config = {
+							method : "POST",
+							headers: {'X-CSRFToken': csrftoken,"Content-Type" :  "application/json"},
+							body: JSON.stringify(data)
+						}
+						fetch('/solicitud_cambio_matricula', config)
+							.then(response => response.json())
+							.then(data => {
+								console.log('Success:', data);
+							})
+							.catch((error) => {
+								console.error('Error:', error);
+							});
+						window.location = "{% url 'solicitud_cambio_matricula' %}"
+					}
+					</script>
+				</form>
+				<button onclick="ret('val')" >Solicitar</button>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
+{% endblock %}

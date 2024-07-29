@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LISTA DE RESPUESTAS</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Solicitud</th>
+			<th>Solicito</th>
+			<th>Interesado</th>
+			<th>Ofrezco</th>
+		</tr>
+		{% for res in respuestas %}
+		<tr>
+			<td>{{ res.solicitud.cui_solicitante }}</td>
+			<td>{{ res.solicitud.curso_solicitante }}</td>
+			<td>{{ res.interesado }}</td>
+			<td>{{ res.ofrezco }}</td>
+			<td><form action="{% url 'validarCambio' res.id %}" method="POST">{% csrf_token %}
+				<input type="submit" value="Aceptar"> 
+			</form></td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
+{% endblock %}

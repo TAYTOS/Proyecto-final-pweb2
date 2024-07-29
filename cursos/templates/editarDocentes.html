@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EDITAR DOCENTE</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<div class="contenedor-login" style="height: 300px" >
+	<form method='POST'> {% csrf_token %}
+		<legend>Editar Docentes</legend>
+		{{ form.as_p }}
+		<button>Update</button>
+	</form>
+	<form action="{% url 'status_Docentes' docente.cod_docente %}" method='POST'>{% csrf_token %} 
+		<button>Modificar estado</button>
+	</form>
+	</div>
+</body>
+</html>
+{% endblock %}

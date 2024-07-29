@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ASIGNATURAS</title>
+	<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+	<h1> ASIGNATURAS </h1>
+	<table>
+		<tr>
+			<th>Código Asignatura</th>
+			<th>Nombre Curso</th>
+			<th>Estado</th>
+			<th>Agregar grupo</th>
+		</tr>
+		{% for asignatura in asignaturas %}
+		<tr>
+			<td>{{ asignatura.cod_asignatura }}</td>
+			<td>{{ asignatura.nombre_curso }}</td>
+			<td>{{ asignatura.status }}</td>
+			<td><a  href="{% url 'agregar_grupo' asignatura.cod_asignatura %} "  >Agregar grupo</a></td>
+		</tr>
+		{% endfor %}
+		<a href="/verlaboratorios">Ver laboratorios</a>
+	</table>
+</body>
+</html>
+{% endblock %}

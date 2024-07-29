@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MIS LABORATORIOS</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "style.css"%}">
+</head>
+<body>
+	<h1> MIS LABORATORIOS </h1>
+	<table>
+		<tr>
+			<th>Usuario</th>
+			<th>Nombre Asignatura</th>
+			<th>Codigo Asignatura</th>
+			<th>Desmatricularme</th>
+		</tr>
+		{% for lab in mislabs %}
+		<tr>
+			<td>{{ lab.cui }}</td>
+			<td>{{ lab.cod_curso.cod_asignatura }}</td>
+			<td>{{ lab.cod_curso.grupo }}</td>
+			<td><form  action="{% url 'desmatricularme' lab.cod_curso %}" method="POST">{% csrf_token %} 
+            <input type="submit" value="Desmatricularme">
+			</form></td>
+		</tr>
+		{% endfor %}
+		<a href="/matricula">Matricularme</a>
+	</table>
+</body>
+</html>
+{% endblock %}
