@@ -250,7 +250,13 @@
 
 <td style="width:25%;"><img src="https://github.com/TAYTOS/Proyecto-final-pweb2/blob/main/readme/Captura%20de%20pantalla%202024-07-29%20002432.png?raw=true" alt="EPIS" style="width:80%; height:auto"/></td>
 
+Porcentaje de participacion en el proyecto
 
+| Autocalificacion | | 
+| -- | -- | 
+| Betanzos Rosas Taylor Anthony  | 45%  | 
+| Castillo Lazo Rodrigo Zarun | 35% | 
+| Coaquira Suyo Gabriela Dayana  | 20% | 
 
 
 
